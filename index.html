@@ -1,152 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ahmed Elsayed Hameda Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ahmed Elsayed Hameda — Portfolio</title>
+  <meta name="description" content="Ahmed Elsayed Hameda Portfolio — Full Stack .NET Developer and IT Student.">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
+
 <body>
 
-<!-- Header -->
-<header>
-  <nav>
-    <div class="logo">Ahmed Elsayed Hameda</div>
-    <i class="fas fa-bars menu-toggle"></i>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#portfolio">Projects</a></li>
-      <li><a href="#certificates">Certificates</a></li>
-    </ul>
-    <button id="mode-toggle"><i class="fas fa-moon"></i></button>
-  </nav>
-</header>
-
-<!-- Home -->
-<section id="home">
-  <div class="overlay">
-    <h1 class="animate">Ahmed Elsayed Hameda</h1>
-    <p class="animate">
-      I am an Information Technology student and a participant in the Digital Egypt Pioneers Initiative (Full Stack .NET).
-      I am passionate about developing websites, C# applications, and managing databases to deliver real value through practical solutions.
-    </p>
-    <div class="cv-buttons">
-      <a href="CV/Ahmed_Elsayed_CV (1).pdf" class="btn" target="_blank">📄 View CV</a>
-      <a href="CV/Ahmed_Elsayed_CV (1).pdf" class="btn" download>⬇️ Download CV</a>
-    </div>
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="loader">AH</div>
   </div>
-</section>
 
-<!-- About -->
-<section id="about">
-  <h2>About Me</h2>
-  <div class="about-content">
-    <img src="images/WhatsApp Image 2025-09-08 at 08.24.10_b3fd4112.jpg" alt="Ahmed Elsayed" class="profile-img animate">
-    <div class="text animate">
-      <p>
-        I am Ahmed Elsayed Hameda, a student at the Faculty of Information Technology and a Full Stack .NET trainee at the Digital Egypt Pioneers Initiative.
-        I enjoy creating innovative web solutions, desktop applications, and managing databases with a focus on scalability and user experience.
-        My goal is to transform ideas into practical, high-quality digital products.
+  <!-- Header -->
+  <header>
+    <nav class="nav-inner">
+      <div class="logo">Ahmed Elsayed Hameda</div>
+
+      <button class="menu-toggle" aria-label="menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+
+      <ul class="nav-links">
+        <li><a href="#home" data-link>Home</a></li>
+        <li><a href="#about" data-link>About</a></li>
+        <li><a href="#skills" data-link>Skills</a></li>
+        <li><a href="#services" data-link>Services</a></li>
+        <li><a href="#portfolio" data-link>Projects</a></li>
+        <li><a href="#certificates" data-link>Certificates</a></li>
+        <li><a id="connect-anchor" href="#contact" class="connect-link">Connect Me</a></li>
+      </ul>
+
+      <div class="right-controls">
+        <button id="mode-toggle" aria-label="theme"><i class="fas fa-moon"></i></button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero / Home -->
+  <section id="home" class="hero">
+    <div class="overlay">
+      <h1 class="animate">Ahmed Elsayed Hameda</h1>
+      <p class="subtitle animate">Full Stack .NET Developer | Information Technology Student <span id="typed"></span>
       </p>
+
+      <div class="cv-buttons animate">
+        <button class="btn" id="view-cv" onclick="window.open('CV/CV .pdf')">📄 View CV</button>
+        <button class="btn ghost" id="download-cv" onclick="location.href='CV/CV .pdf'">⬇️ Download
+          CV</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content animate">
+      <img src="images/WhatsApp Image 2025-09-08 at 08.24.10_b3fd4112.jpg" alt="Ahmed Elsayed" class="profile-img">
+      <div class="text">
+        <p>
+          I am Ahmed Elsayed Hamida, a student at the Faculty of Information Technology and a
+          .NET Full Stack trainee
+          in the Digital Egypt Pioneers Initiative (DEPI).
+          I enjoy developing innovative web solutions and desktop applications,
+          as well as managing databases with a
+          strong focus on scalability and user experience.
+          My goal is to transform ideas into practical, high-quality digital products.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-container animate">
+      <div class="skill-card"><i class="fab fa-html5"></i>
+        <p>HTML</p>
+      </div>
+      <div class="skill-card"><i class="fab fa-css3-alt"></i>
+        <p>CSS</p>
+      </div>
+      <div class="skill-card"><i class="fab fa-js"></i>
+        <p>JavaScript</p>
+      </div>
+      <div class="skill-card"><i class="fas fa-database"></i>
+        <p>Database</p>
+      </div>
+      <div class="skill-card"><i class="fas fa-code"></i>
+        <p>C# / .NET</p>
+      </div>
+      <div class="skill-card"><i class="fab fa-bootstrap"></i>
+        <p>Bootstrap</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <h2>Services</h2>
+    <div class="services-container">
+      <div class="service-card card-tilt" data-tilt>
+        <i class="fas fa-laptop-code"></i>
+        <h3>Web Development</h3>
+        <div class="skill-bar">
+          <div data-percent="90"></div>
+        </div>
+        <p>Modern responsive websites for all devices.</p>
+      </div>
+
+      <div class="service-card card-tilt" data-tilt>
+        <i class="fas fa-database"></i>
+        <h3>Database Management</h3>
+        <div class="skill-bar">
+          <div data-percent="85"></div>
+        </div>
+        <p>Secure database design & CRUD operations.</p>
+      </div>
+
+      <div class="service-card card-tilt" data-tilt>
+        <i class="fas fa-layer-group"></i>
+        <h3>Full Stack .NET</h3>
+        <div class="skill-bar">
+          <div data-percent="80"></div>
+        </div>
+        <p>Building complete apps with C# and ASP.NET.</p>
+      </div>
+
+      <div class="service-card card-tilt" data-tilt>
+        <i class="fas fa-tools"></i>
+        <h3>Optimization</h3>
+        <div class="skill-bar">
+          <div data-percent="75"></div>
+        </div>
+        <p>Improving and maintaining projects for UX.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <h2>Projects</h2>
+    <div class="portfolio-container">
+      <div class="portfolio-item card-tilt" data-tilt>
+        <img src="images/Smart HOME.jpg" alt="Smart Home" class="lightbox-target">
+        <h4>Smart Home Project</h4>
+      </div>
+
+      <div class="portfolio-item card-tilt" data-tilt>
+        <img src="images/university.jpg" alt="University Website" class="lightbox-target">
+        <h4><a href="https://al-jahini.github.io/batuuuche/" target="_blank" rel="noopener">University Website</a></h4>
+      </div>
+
+      <div class="portfolio-item card-tilt" data-tilt>
+        <img src="images/smartcart.jpg" alt="Smart Shopping Cart" class="lightbox-target">
+        <h4>Smart Shopping Cart</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <div class="portfolio-container">
+      <div class="portfolio-item">
+        <img src="images/AMOC.jpg" alt="AMOC Certificate" class="lightbox-target">
+        <h4>Training Certificate ALEXANDRIA MINERAL OILS COMPANY (AMOC)</h4>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/Smart Home Certificate.jpg" alt="Smart Home Certificate" class="lightbox-target">
+        <h4>Smart Home Certificate</h4>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/Smart Home C.jpg" alt="Smart Home Certificate" class="lightbox-target">
+        <h4>Certificate of appreciation from the Second International Conference on Technological Education 2025 for the
+          Smart Home project</h4>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/Smart Shopping Cart Certificate.jpg" alt="Smart Cart Certificate" class="lightbox-target">
+        <h4>Smart Shopping Cart Certificate</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Connect with me:</p>
+    <div class="social-icons">
+      <a class="linkedin" href="https://www.linkedin.com/in/ahmed-elsayed-a45631344" target="_blank"><i
+          class="fab fa-linkedin"></i></a>
+      <a class="github" href="https://github.com/Al-Jahini" target="_blank"><i class="fab fa-github"></i></a>
+      <a class="email" href="mailto:alsyedahmed860@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a class="whatsapp" href="https://api.whatsapp.com/send?phone=201228670955" target="_blank"><i
+          class="fab fa-whatsapp"></i></a>
+      <a class="briefcase" href="https://khamsat.com/user/ahmed_elsayed955" target="_blank"><i
+          class="fas fa-briefcase"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ahmed Elsayed Hameda. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Lightbox modal -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" aria-label="close">&times;</button>
+      <img src="" alt="preview" />
     </div>
   </div>
-</section>
 
-<!-- Skills -->
-<section id="skills">
-  <h2>My Skills</h2>
-  <div class="skills-container">
-    <div class="skill-card"><i class="fab fa-html5"></i><p>HTML</p></div>
-    <div class="skill-card"><i class="fab fa-css3-alt"></i><p>CSS</p></div>
-    <div class="skill-card"><i class="fab fa-js"></i><p>JavaScript</p></div>
-    <div class="skill-card"><i class="fas fa-database"></i><p>Database</p></div>
-    <div class="skill-card"><i class="fas fa-code"></i><p>C# / .NET</p></div>
-    <div class="skill-card"><i class="fab fa-bootstrap"></i><p>Bootstrap</p></div>
-  </div>
-</section>
+  <!-- Back to top -->
+  <button id="backTop" class="back-top" aria-label="back to top"><i class="fas fa-arrow-up"></i></button>
 
-<!-- Services -->
-<section id="services">
-  <h2>Services</h2>
-  <div class="services-container">
-    <div class="service-card animate">
-      <i class="fas fa-laptop-code"></i>
-      <h3>Web Development</h3>
-      <p>Modern responsive websites for all devices.</p>
-    </div>
-    <div class="service-card animate">
-      <i class="fas fa-database"></i>
-      <h3>Database Management</h3>
-      <p>Secure database design & CRUD operations.</p>
-    </div>
-    <div class="service-card animate">
-      <i class="fas fa-layer-group"></i>
-      <h3>Full Stack .NET</h3>
-      <p>Building complete apps with C# and ASP.NET.</p>
-    </div>
-    <div class="service-card animate">
-      <i class="fas fa-tools"></i>
-      <h3>Optimization</h3>
-      <p>Improving and maintaining projects for UX.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Portfolio -->
-<section id="portfolio">
-  <h2>Projects</h2>
-  <div class="portfolio-container">
-    <div class="portfolio-item animate">
-      <img src="images/smarthome.jpg" alt="Smart Home">
-      <h4>Smart Home Project</h4>
-    </div>
-    <div class="portfolio-item animate">
-      <img src="images/university.jpg" alt="University Website">
-      <h4>University Website</h4>
-    </div>
-    <div class="portfolio-item animate">
-      <img src="images/smartcart.jpg" alt="Smart Shopping Cart">
-      <h4>Smart Shopping Cart</h4>
-    </div>
-  </div>
-</section>
-
-<!-- Certificates -->
-<section id="certificates">
-  <h2>Certificates</h2>
-  <div class="portfolio-container">
-    <div class="portfolio-item animate">
-      <img src="images/amoc.jpg" alt="AMOC Certificate">
-      <h4>AMOC Training Certificate</h4>
-    </div>
-    <div class="portfolio-item animate">
-      <img src="images/Smart Home Certificate.jpg" alt="Smart Home Certificate">
-      <h4>Smart Home Certificate</h4>
-    </div>
-    <div class="portfolio-item animate">
-      <img src="images/Smart Shopping Cart Certificate.jpg" alt="Smart Cart Certificate">
-      <h4>Smart Shopping Cart Certificate</h4>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <p>Connect with me:</p>
-  <div class="social-icons">
-    <a href="https://www.linkedin.com/in/ahmed-elsayed-a45631344" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/Al-Jahini" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="mailto:alsyedahmed860@gmail.com"><i class="fas fa-envelope"></i></a>
-    <a href="https://api.whatsapp.com/send?phone=201228670955" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://khamsat.com/user/ahmed_elsayed955" target="_blank"><i class="fas fa-briefcase"></i></a>
-  </div>
-  <p>&copy; 2025 Ahmed Elsayed Hameda. All Rights Reserved.</p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
